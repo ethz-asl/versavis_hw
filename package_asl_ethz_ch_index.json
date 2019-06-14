@@ -1,0 +1,31 @@
+{
+  "packages": [
+    {
+      "name": "ASL AVI Board",
+      "maintainer": "Autonomous Systems Lab, ETHZ",
+      "websiteURL": "http://www.asl.ethz.ch",
+      "email": "michael.riner-kuhn@mavt.ethz.ch",
+      "help": {"online": "http://www.asl.ethz.ch"},
+      "platforms": [
+        {
+          "name": "ASL_AVI",
+          "architecture": "samd",
+          "version": "1.0",
+          "category": "Contributed",
+          "help": {
+            "online": "http://www.asl.ethz.ch"
+          },
+          "url": "https://raw.githubusercontent.com/avandalen/SAM15x15/master/ASL_AVI.tar.bz2",
+          "archiveFileName": "ASL_AVI.tar.bz2",
+"checksum": "SHA256: ABE380A496977B71738AC0A141CEE06369DFC10D48A96CAFF5B5B5DEEC310A73",
+          "size": "2842040",
+          "boards": [
+            {"name": "ASL_AVI"}
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools":[]
+    }
+  ]
+}
