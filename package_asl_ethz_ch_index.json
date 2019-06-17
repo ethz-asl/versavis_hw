@@ -17,7 +17,7 @@
           },
           "url": "https://github.com/ethz-asl/asl_avi_board/raw/master/ASL_AVI.tar.bz2",
           "archiveFileName": "ASL_AVI.tar.bz2",
-"checksum": "SHA256: ABE380A496977B71738AC0A141CEE06369DFC10D48A96CAFF5B5B5DEEC310A73",
+"checksum": "SHA256:ABE380A496977B71738AC0A141CEE06369DFC10D48A96CAFF5B5B5DEEC310A73",
           "size": "2842040",
           "boards": [
             {"name": "ASL_AVI"}
