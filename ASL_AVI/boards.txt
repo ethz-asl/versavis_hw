@@ -1,0 +1,62 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# ASL AVI Board (only native USB port)
+# ---------------------------------------
+ASL_AVI.name=ASL AVI Board
+ASL_AVI.vid.0=0x2341
+ASL_AVI.pid.0=0x804d
+ASL_AVI.vid.1=0x2341
+ASL_AVI.pid.1=0x004d
+
+ASL_AVI.vid.2=0x2341
+ASL_AVI.pid.2=0x824d
+# If the board is a 2341:824d use 2341:824d for build and set other parameters as well
+ASL_AVI.vid.2.build.vid=0x2341
+ASL_AVI.vid.2.build.pid=0x824d
+ASL_AVI.vid.2.build.usb_product="Genuino Zero"
+ASL_AVI.vid.2.bootloader.file=zero/samd21_sam_ba_genuino.bin
+
+ASL_AVI.vid.3=0x2341
+ASL_AVI.pid.3=0x024d
+# If the board is a 2341:024d use 2341:824d for build and set other parameters as well
+ASL_AVI.vid.3.build.vid=0x2341
+ASL_AVI.vid.3.build.pid=0x824d
+ASL_AVI.vid.3.build.usb_product="Genuino Zero"
+ASL_AVI.vid.3.bootloader.file=zero/samd21_sam_ba_genuino.bin
+
+ASL_AVI.upload.tool=bossac
+ASL_AVI.upload.protocol=sam-ba
+ASL_AVI.upload.maximum_size=262144
+ASL_AVI.upload.use_1200bps_touch=true
+ASL_AVI.upload.wait_for_upload_port=true
+ASL_AVI.upload.native_usb=true
+ASL_AVI.build.mcu=cortex-m0plus
+ASL_AVI.build.f_cpu=48000000L
+ASL_AVI.build.usb_product="Arduino Zero"
+ASL_AVI.build.usb_manufacturer="Arduino LLC"
+ASL_AVI.build.board=SAMD_ZERO
+ASL_AVI.build.core=arduino
+ASL_AVI.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
+ASL_AVI.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+ASL_AVI.build.openocdscript=openocd_scripts/arduino_zero.cfg
+ASL_AVI.build.variant=arduino_zero
+ASL_AVI.build.variant_system_lib=
+ASL_AVI.build.vid=0x2341
+ASL_AVI.build.pid=0x804d
+ASL_AVI.bootloader.tool=openocd
+ASL_AVI.bootloader.file=zero/samd21_sam_ba.bin
+
