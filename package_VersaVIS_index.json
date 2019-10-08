@@ -1,0 +1,31 @@
+{
+  "packages": [
+    {
+      "name": "VersaVIS",
+      "maintainer": "Autonomous Systems Lab, ETHZ",
+      "websiteURL": "http://www.asl.ethz.ch",
+      "email": "michael.riner-kuhn@mavt.ethz.ch",
+      "help": {"online": "http://www.asl.ethz.ch"},
+      "platforms": [
+        {
+          "name": "VersaVIS",
+          "architecture": "samd",
+          "version": "1.0",
+          "category": "Contributed",
+          "help": {
+            "online": "http://www.asl.ethz.ch"
+          },
+          "url": "https://github.com/ethz-asl/VersaVIS_HW/raw/master/VersaVIS.tar.bz2",
+          "archiveFileName": "VersaVIS.tar.bz2",
+		  "checksum": "SHA-256:D4829DD3BF981D47E5ACCD5064E280E7081C36004638097F68FFB4BA66709304",
+          "size": "2862154",
+          "boards": [
+            {"name": "VersaVIS"}
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools":[]
+    }
+  ]
+}
