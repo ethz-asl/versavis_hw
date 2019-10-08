@@ -16,7 +16,7 @@
 
 # VersaVIS Board (only native USB port)
 # ---------------------------------------
-VersaVIS.name=VersaVIS Board
+VersaVIS.name=VersaVIS
 VersaVIS.vid.0=0x2341
 VersaVIS.pid.0=0x804d
 VersaVIS.vid.1=0x2341
