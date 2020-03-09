@@ -4,7 +4,7 @@ VersaVIS Board package for arduino IDE
 * To use, add https://github.com/ethz-asl/versavis_hw/raw/master/package_VersaVIS_index.json in Arduino IDE -> File -> Preferences -> Additional Boards Manager URLs.
 * Add the VersaVIS board to the board manager (Tools -> Board -> Board Manager)
 
-## Pinout for VersaVIS 1.0
+## Pinout for VersaVIS 1.0 and VersaVIS 1.1
 based on [this](https://docs.google.com/spreadsheets/d/1Ky8IHlCCgtuCESapGA7kTjg_rHfAfQyLWzFp4BHC_iQ/edit#gid=0)
 
 | Port ||        Pin      ||||                                     | Periphery |
