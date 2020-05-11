@@ -56,21 +56,7 @@
           ]
         }
       ],
-      "tools":[
-       {
-          "name": "windows-drivers",
-          "version": "1.6.9",
-          "systems": [
-            {
-              "host": "i686-mingw32",
-              "url": "http://downloads.arduino.cc/tools/drivers-arduino-windows-1.6.9.zip",
-              "archiveFileName": "drivers-arduino-windows-1.6.9.zip",
-              "checksum": "SHA-256:10d456ab18d164d42545255db8bef4ac9e1bf660cc89acb7a0980b5a486654ac",
-              "size": "7071714"
-            }
-          ]
-        }
-      ]
+      "tools":[]
     }
   ]
 }
