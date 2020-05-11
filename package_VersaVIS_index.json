@@ -26,17 +26,17 @@
             {
               "packager": "arduino",
               "name": "arm-none-eabi-gcc",
-              "version": "4.8.3-2014q1"
+              "version": "7-2017q4"
             },
             {
               "packager": "arduino",
               "name": "bossac",
-              "version": "1.7.0"
+              "version": "1.7.0-arduino3"
             },
             {
               "packager": "arduino",
               "name": "openocd",
-              "version": "0.9.0-arduino6-static"
+              "version": "0.10.0-arduino7"
             },
             {
               "packager": "arduino",
@@ -46,17 +46,31 @@
             {
               "packager": "arduino",
               "name": "CMSIS-Atmel",
-              "version": "1.1.0"
+              "version": "1.2.0"
             },
             {
               "packager": "arduino",
               "name": "arduinoOTA",
-              "version": "1.2.0"
+              "version": "1.2.1"
             }
           ]
         }
       ],
-      "tools":[]
+      "tools":[
+       {
+          "name": "windows-drivers",
+          "version": "1.6.9",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "http://downloads.arduino.cc/tools/drivers-arduino-windows-1.6.9.zip",
+              "archiveFileName": "drivers-arduino-windows-1.6.9.zip",
+              "checksum": "SHA-256:10d456ab18d164d42545255db8bef4ac9e1bf660cc89acb7a0980b5a486654ac",
+              "size": "7071714"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
