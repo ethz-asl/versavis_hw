@@ -4,11 +4,13 @@
       "name": "VersaVIS",
       "maintainer": "Autonomous Systems Lab, ETHZ",
       "websiteURL": "http://www.asl.ethz.ch",
-      "email": "michael.riner-kuhn@mavt.ethz.ch",
-      "help": {"online": "http://www.asl.ethz.ch"},
+      "email": "versavis@ethz-asl.ch",
+      "help": {
+	     "online": "http://www.asl.ethz.ch"
+	  },
       "platforms": [
         {
-          "name": "VersaVIS",
+          "name": "VersaVIS 1",
           "architecture": "samd",
           "version": "1.0",
           "category": "Contributed",
@@ -17,12 +19,43 @@
           },
           "url": "https://github.com/ethz-asl/VersaVIS_HW/raw/master/VersaVIS.tar.bz2",
           "archiveFileName": "VersaVIS.tar.bz2",
-		  "checksum": "SHA-256:3DFDDA47A58ADF563A96EF82E1CBB9E49B300CF38AF3D1339D32DD780327F089",
-          "size": "2879283",
+		  "checksum": "SHA-256:F7B937A287115DF6A8AC8257555FA540AA37C860E8A766997474FFF65C8DAAAB",
+          "size": "1006605",
           "boards": [
-            {"name": "VersaVIS"}
+            {"name": "VersaVIS 1"}
           ],
-          "toolsDependencies": []
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "7-2017q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.7.0-arduino3"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "arduinoOTA",
+              "version": "1.2.1"
+            }
+          ]
         }
       ],
       "tools":[]
