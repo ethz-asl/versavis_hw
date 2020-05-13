@@ -58,6 +58,25 @@ class SPISettings {
   // Default speed set to 4MHz, SPI mode set to MODE 0 and Bit order set to MSB first.
   SPISettings() { init_AlwaysInline(4000000, MSBFIRST, SPI_MODE0); }
 
+  bool operator==(const SPISettings& rhs) const
+  {
+    if ((this->clockFreq == rhs.clockFreq) &&
+        (this->bitOrder == rhs.bitOrder) &&
+        (this->dataMode == rhs.dataMode)) {
+      return true;
+    }
+    return false;
+  }
+
+  bool operator!=(const SPISettings& rhs) const
+  {
+    return !(*this == rhs);
+  }
+
+  uint32_t getClockFreq() const {return clockFreq;}
+  uint8_t getDataMode() const {return (uint8_t)dataMode;}
+  BitOrder getBitOrder() const {return (bitOrder == MSB_FIRST ? MSBFIRST : LSBFIRST);}
+
   private:
   void init_MightInline(uint32_t clock, BitOrder bitOrder, uint8_t dataMode) {
     init_AlwaysInline(clock, bitOrder, dataMode);
@@ -90,10 +109,11 @@ class SPISettings {
   friend class SPIClass;
 };
 
+const SPISettings DEFAULT_SPI_SETTINGS = SPISettings();
+
 class SPIClass {
   public:
   SPIClass(SERCOM *p_sercom, uint8_t uc_pinMISO, uint8_t uc_pinSCK, uint8_t uc_pinMOSI, SercomSpiTXPad, SercomRXPad);
-
 
   byte transfer(uint8_t data);
   uint16_t transfer16(uint16_t data);
@@ -127,6 +147,8 @@ class SPIClass {
 
   SercomSpiTXPad _padTx;
   SercomRXPad _padRx;
+
+  SPISettings settings;
 
   bool initialized;
   uint8_t interruptMode;

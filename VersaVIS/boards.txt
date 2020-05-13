@@ -28,7 +28,7 @@ VersaVIS.pid.2=0x824d
 VersaVIS.vid.2.build.vid=0x2341
 VersaVIS.vid.2.build.pid=0x824d
 VersaVIS.vid.2.build.usb_product="Genuino Zero"
-VersaVIS.vid.2.bootloader.file=zero/samd21_sam_ba_genuino.bin
+VersaVIS.vid.2.bootloader.file=zero_versavis/samd21_sam_ba_versavis.bin
 
 VersaVIS.vid.3=0x2341
 VersaVIS.pid.3=0x024d
@@ -36,7 +36,7 @@ VersaVIS.pid.3=0x024d
 VersaVIS.vid.3.build.vid=0x2341
 VersaVIS.vid.3.build.pid=0x824d
 VersaVIS.vid.3.build.usb_product="Genuino Zero"
-VersaVIS.vid.3.bootloader.file=zero/samd21_sam_ba_genuino.bin
+VersaVIS.vid.3.bootloader.file=zero_versavis/samd21_sam_ba_versavis.bin
 
 VersaVIS.upload.tool=bossac
 VersaVIS.upload.protocol=sam-ba
@@ -53,10 +53,10 @@ VersaVIS.build.core=arduino
 VersaVIS.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
 VersaVIS.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 VersaVIS.build.openocdscript=openocd_scripts/arduino_zero.cfg
-VersaVIS.build.variant=arduino_zero
+VersaVIS.build.variant=zero_versavis
 VersaVIS.build.variant_system_lib=
 VersaVIS.build.vid=0x2341
 VersaVIS.build.pid=0x804d
 VersaVIS.bootloader.tool=openocd
-VersaVIS.bootloader.file=zero/samd21_sam_ba.bin
+VersaVIS.bootloader.file=zero_versavis/samd21_sam_ba_versavis.bin
 

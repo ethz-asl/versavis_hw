@@ -6,7 +6,7 @@ for Atmel's SAMD21 processor (used on the Arduino/Genuino Zero, MKR1000 and MKRZ
 ## Installation on Arduino IDE
 
 This core is available as a package in the Arduino IDE cores manager.
-Just open the "Boards Manager" and install the package called (version 1.6.20!):
+Just open the "Boards Manager" and install the package called:
 
 "Arduino SAMD Boards (32-bit ARM Cortex-M0+)"
 

@@ -22,8 +22,7 @@
 #include "USBCore.h"
 #include "PluggableUSB.h"
 
-#if defined(USBCON)
-#ifdef PLUGGABLE_USB_ENABLED
+#if defined(USBCON) && defined(PLUGGABLE_USB_ENABLED)
 
 extern uint32_t EndPoints[];
 
@@ -52,13 +51,17 @@ int PluggableUSB_::getDescriptor(USBSetup& setup)
 	return 0;
 }
 
-void PluggableUSB_::getShortName(char *iSerialNum)
+uint8_t PluggableUSB_::getShortName(char *iSerialNum)
 {
-       PluggableUSBModule* node;
-       for (node = rootNode; node; node = node->next) {
-               iSerialNum += node->getShortName(iSerialNum);
-       }
-       *iSerialNum = 0;
+	PluggableUSBModule* node;
+	uint8_t size = 0;
+	for (node = rootNode; node; node = node->next) {
+		uint8_t len = node->getShortName(iSerialNum);
+		iSerialNum += len;
+		size += len;
+	}
+	*iSerialNum = 0;
+	return size;
 }
 
 bool PluggableUSB_::setup(USBSetup& setup)
@@ -70,6 +73,14 @@ bool PluggableUSB_::setup(USBSetup& setup)
 		}
 	}
 	return false;
+}
+
+void PluggableUSB_::handleEndpoint(int ep)
+{
+	PluggableUSBModule* node;
+	for (node = rootNode; node; node = node->next) {
+		node->handleEndpoint(ep);
+	}
 }
 
 bool PluggableUSB_::plug(PluggableUSBModule *node)
@@ -105,12 +116,9 @@ PluggableUSB_& PluggableUSB()
 	return obj;
 }
 
-PluggableUSB_::PluggableUSB_() : lastIf(CDC_ACM_INTERFACE + CDC_INTERFACE_COUNT),
-                                 lastEp(CDC_FIRST_ENDPOINT + CDC_ENPOINT_COUNT),
-                                 rootNode(NULL)
+PluggableUSB_::PluggableUSB_() : lastIf(0), lastEp(1), rootNode(NULL)
 {
 	// Empty
 }
 
-#endif
 #endif
