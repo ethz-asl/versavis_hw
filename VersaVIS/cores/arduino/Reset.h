@@ -26,8 +26,6 @@ void initiateReset(int ms);
 void tickReset();
 void cancelReset();
 
- __attribute__ ((weak)) void resetExternalChip() {};
-
 #ifdef __cplusplus
 }
 #endif

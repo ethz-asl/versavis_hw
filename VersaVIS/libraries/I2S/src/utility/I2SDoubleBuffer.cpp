@@ -16,13 +16,11 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include <stdlib.h>
 #include <string.h>
 
 #include "I2SDoubleBuffer.h"
 
-I2SDoubleBuffer::I2SDoubleBuffer() :
-  _size(DEFAULT_I2S_BUFFER_SIZE)
+I2SDoubleBuffer::I2SDoubleBuffer()
 {
   reset();
 }
@@ -31,16 +29,8 @@ I2SDoubleBuffer::~I2SDoubleBuffer()
 {
 }
 
-void I2SDoubleBuffer::setSize(int size)
-{
-  _size = size;
-}
-
 void I2SDoubleBuffer::reset()
 {
-  _buffer[0] = (uint8_t*)realloc(_buffer[0], _size);
-  _buffer[1] = (uint8_t*)realloc(_buffer[1], _size);
-
   _index = 0;
   _length[0] = 0;
   _length[1] = 0;
@@ -50,7 +40,7 @@ void I2SDoubleBuffer::reset()
 
 size_t I2SDoubleBuffer::availableForWrite()
 {
-  return (_size - (_length[_index] - _readOffset[_index]));
+  return (I2S_BUFFER_SIZE - (_length[_index] - _readOffset[_index]));
 }
 
 size_t I2SDoubleBuffer::write(const void *buffer, size_t size)

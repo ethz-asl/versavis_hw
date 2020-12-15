@@ -12,14 +12,14 @@
         {
           "name": "VersaVIS 1",
           "architecture": "samd",
-          "version": "1.0",
+          "version": "1.1",
           "category": "Contributed",
           "help": {
             "online": "http://www.asl.ethz.ch"
           },
           "url": "https://github.com/ethz-asl/VersaVIS_HW/raw/master/VersaVIS.tar.bz2",
           "archiveFileName": "VersaVIS.tar.bz2",
-		  "checksum": "SHA-256:F7B937A287115DF6A8AC8257555FA540AA37C860E8A766997474FFF65C8DAAAB",
+		  "checksum": "SHA-256:5345ECC742EF2D534E9CD444DFB8BA54CB2A762F45020078513EB4F51CD09AB0",
           "size": "1006605",
           "boards": [
             {"name": "VersaVIS 1"}
