@@ -12,7 +12,7 @@
         {
           "name": "VersaVIS 1",
           "architecture": "samd",
-          "version": "1.1",
+          "version": "1_1",
           "category": "Contributed",
           "help": {
             "online": "http://www.asl.ethz.ch"
