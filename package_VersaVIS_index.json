@@ -20,7 +20,7 @@
           "url": "https://github.com/ethz-asl/VersaVIS_HW/raw/master/VersaVIS.tar.bz2",
           "archiveFileName": "VersaVIS.tar.bz2",
 		  "checksum": "SHA-256:5345ECC742EF2D534E9CD444DFB8BA54CB2A762F45020078513EB4F51CD09AB0",
-          "size": "918171",
+          "size": "918171", 
           "boards": [
             {"name": "VersaVIS 1"}
           ],
